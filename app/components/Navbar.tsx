@@ -8,7 +8,7 @@ async function Navbar() {
   const authUser = await auth();
 
   return (
-    <header className="p-1 md:px-3 md:py-2 lg:px-5 lg:py-3 bg-white shadow-sm font-work-sans">
+    <header className="p-1 md:px-3 md:py-2 lg:px-5 lg:py-3 bg-white shadow-sm font-sans">
       <nav className="flex justify-between items-center">
         <Image
           src={logo}
@@ -35,7 +35,7 @@ async function Navbar() {
               height={460}
               alt={`${authUser.user.name}'s Avatar`}
               placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcJgkAAWsAwZyjJXAAAAAASUVORK5CYII="
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8og0AAbkA8QNU2M4AAAAASUVORK5CYII="
               className="w-8 h-8 lg:w-9 lg:h-9 rounded-full"
             />
           </div>
