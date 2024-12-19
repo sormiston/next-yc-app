@@ -8,8 +8,8 @@ async function Navbar() {
   const authUser = await auth();
 
   return (
-    <header className="p-1 md:px-3 md:py-2 lg:px-5 lg:py-3 bg-white shadow-sm font-sans">
-      <nav className="flex justify-between items-center">
+    <header className="p-1 md:px-3 md:py-2 lg:px-5 lg:py-3 shadow-sm">
+      <nav className="flex justify-between items-center font-semibold text-base md:text-xl select-none tracking-tight">
         <Image
           src={logo}
           alt="YC Directory logo"
@@ -18,7 +18,7 @@ async function Navbar() {
         />
 
         {authUser?.user ? (
-          <div className="flex items-center h-9 gap-2 md:gap-5 lg:gap-8">
+          <div className="flex items-center h-9 gap-3 md:gap-5 lg:gap-8">
             <Link href="/startup/create">Create</Link>
             <form
               action={async () => {
@@ -26,7 +26,9 @@ async function Navbar() {
                 await signOut({ redirectTo: "/" });
               }}
             >
-              <button type="submit">Logout</button>
+              <button className="text-primary" type="submit">
+                Logout
+              </button>
             </form>
             {/* TODO: this avatar must serve as link to /users/[userId] */}
             <Image
