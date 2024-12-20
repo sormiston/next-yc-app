@@ -19,15 +19,13 @@
 */
 @layer utilities {
   .wallpaper-grid {
-    background-image: linear-gradient(
-      to right,
-      transparent 49.5%,
-      rgba(251, 232, 67, 0.2) 49.5%,
-      rgba(251, 232, 67, 0.6) 50.5%,
-      transparent 50.5%
+    background-image: repeating-linear-gradient(
+      270deg,
+      transparent,
+      transparent 19px,
+      rgb(var(--clr-secondary) / 0.3) 19px,
+      rgb(var(--clr-secondary) / 0.3) 20px,
+      transparent 20px
     );
-    background-size: 5% 100%;
-    background-position: center;
-    background-repeat: repeat-x;
   }
 }
