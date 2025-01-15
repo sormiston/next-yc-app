@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { DarkModeProvider } from "@/app/providers/DarkModeProvider";
 
 export const metadata: Metadata = {
   title: "YC Directory App",
@@ -64,9 +65,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${workSans.variable}`}>
+    <html lang="en" className={`${workSans.variable}`} suppressHydrationWarning>
       <body className="bg-background text-foreground font-medium font-sans antialiased">
-        {children}
+        <DarkModeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </DarkModeProvider>
       </body>
     </html>
   );

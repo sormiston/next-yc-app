@@ -4,12 +4,66 @@
 
 @layer base {
   :root {
-    --clr-background: 245 245 244; /* #f5f5f4 */
-    --clr-surface: 250 250 250; /* #fafafa */
-    --clr-foreground: 9 9 11; /* #09090b */
+    --radius: 0.5rem;
+    /* COLORS */
+    --clr-heavy-ink: 240 10% 4%;
+    
+    --clr-paper: 0 0% 96%;
+    --clr-lemon: 54 97% 63%;
+    --clr-flamingo: 340 83% 55%;
 
-    --clr-primary: 238 43 105; /* #ee2b69 */
-    --clr-secondary: 253 224 71; /* #fde047 */
+   
+    /* BASE SEMANTIC ASSIGNMENTS */
+    --background: var(--clr-paper);
+    --foreground: var(--clr-heavy-ink);
+    --primary: var(--clr-flamingo);
+    --primary-foreground: var(--clr-paper);
+    --secondary: var(--clr-heavy-ink);
+    --secondary-foreground: var(--clr-paper);
+
+    /* DERIVATIVE SEMANTIC ASSIGNMENTS */
+   
+    --card: var(--background);
+    --card-foreground: var(--foreground);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+    
+    
+    /* --secondary: 54 97% 63%;
+    --secondary-foreground: 240 5.9% 10%; */
+    --accent: 54 97% 63%;
+    --accent-foreground: var(--foreground); 
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+   
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 340 83% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
@@ -17,15 +71,26 @@
 --clr-foreground-med: 24, 24, 27;  #18181b 
 --clr-placeholder: 82, 82, 91;  #52525b 
 */
+
 @layer utilities {
   .wallpaper-grid {
     background-image: repeating-linear-gradient(
       270deg,
       transparent,
       transparent 19px,
-      rgb(var(--clr-secondary) / 0.3) 19px,
-      rgb(var(--clr-secondary) / 0.3) 20px,
+      hsl(var(--clr-lemon) / 40%) 19px,
+      hsl(var(--clr-lemon) / 40%) 20px,
       transparent 20px
     );
+  }
+}
+
+@layer base {
+  /* * {
+    @apply border-border;
+  } */
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
   }
 }

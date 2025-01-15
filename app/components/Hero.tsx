@@ -19,12 +19,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </p>
       )}
 
-      <h1 className="w-fit mb-4 uppercase px-2 py-2.5 md:px-4 md:py-3 font-extrabold text-center leading-tight text-[2.25rem] md:text-[3.375rem] bg-foreground text-surface">
+      <h1 className="w-fit mb-4 uppercase px-2 py-2.5 md:px-4 md:py-3 font-extrabold text-center leading-tight text-[2.25rem] md:text-[3.375rem] bg-secondary text-secondary-foreground">
         {title}
       </h1>
 
       {subtitle && (
-        <p className="w-fit text-xl max-w-prose text-surface text-center font-medium">
+        <p className="w-fit text-xl max-w-prose text-center font-medium text-primary-foreground">
           {subtitle}
         </p>
       )}
