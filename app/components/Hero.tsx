@@ -1,15 +1,18 @@
 import React from "react";
+import SearchForm from "./SearchForm";
 
 interface HeroSectionProps {
   supertitle?: string;
   title: React.ReactNode;
   subtitle?: string;
+  query?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   supertitle,
   title,
   subtitle,
+  query,
 }) => {
   return (
     <div className="bg-primary wallpaper-grid px-3 py-5 md:px-5 md:py-[72px] flex flex-col items-center">
@@ -27,6 +30,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <p className="w-fit text-xl max-w-prose text-center font-medium text-primary-foreground">
           {subtitle}
         </p>
+      )}
+      {typeof query === "string" && (
+        <div className="md:min-w-60 mt-4 md:mt-8">
+          <SearchForm query={query} />
+        </div>
       )}
     </div>
   );
