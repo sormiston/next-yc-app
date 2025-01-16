@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { auth, signIn, signOut } from "@/auth";
 import Link from "next/link";
-import ResponsiveLogo from "@app/components/ResponsiveLogo";
+import ResponsiveLogo from "@/components/ResponsiveLogo";
 
 async function Navbar() {
   const authUser = await auth();
