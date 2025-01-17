@@ -40,6 +40,7 @@ async function Navbar() {
               "use server";
               await signIn();
             }}
+            className="mr-2 md:mr-0"
           >
             <button type="submit">Login</button>
           </form>

@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </p>
       )}
       {typeof query === "string" && (
-        <div className="md:min-w-60 mt-4 md:mt-8">
+        <div className="w-full flex justify-center mt-4 md:mt-8">
           <SearchForm query={query} />
         </div>
       )}
