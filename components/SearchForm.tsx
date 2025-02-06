@@ -7,6 +7,7 @@ const SearchForm = ({ query }: { query: string }) => {
   return (
     <Form
       action="/"
+      scroll={false}
       className="flex flex-1 max-w-3xl h-12 md:h-20 items-center gap-2 border-2 md:border-4 border-secondary bg-background rounded-full pl-7 md:pl-10 pr-7"
     >
       {/* On submission, the input value will be appended to 

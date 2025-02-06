@@ -9,7 +9,12 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
         port: "",
         pathname: "/u/**",
-        // search: '',
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/photo-**",
       },
     ],
   },

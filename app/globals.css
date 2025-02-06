@@ -7,12 +7,14 @@
     --radius: 0.5rem;
     /* COLORS */
     --clr-heavy-ink: 240 10% 4%;
-    
+    --clr-bold-ink: 60, 3%, 8%;
+    --clr-med-ink: 0 0% 20%;
+
     --clr-paper: 0 0% 96%;
     --clr-lemon: 54 97% 63%;
     --clr-flamingo: 340 83% 55%;
+    --clr-muted-flamingo: 341, 100%, 96%;
 
-   
     /* BASE SEMANTIC ASSIGNMENTS */
     --background: var(--clr-paper);
     --foreground: var(--clr-heavy-ink);
@@ -20,30 +22,29 @@
     --primary-foreground: var(--clr-paper);
     --secondary: var(--clr-heavy-ink);
     --secondary-foreground: var(--clr-paper);
+    --neutral: var(--clr-med-ink);
+    --surface: var(--clr-bold-ink);
+    --surface-foreground: var(--clr-paper);
 
     /* DERIVATIVE SEMANTIC ASSIGNMENTS */
-   
-    --card: var(--background);
-    --card-foreground: var(--foreground);
-    --popover: var(--background);
-    --popover-foreground: var(--foreground);
-    
-    
+    --clr-card-border: var(--foreground);
+    --clr-card-hovered-border: var(--primary);
+
     /* --secondary: 54 97% 63%;
     --secondary-foreground: 240 5.9% 10%; */
-    --accent: 54 97% 63%;
-    --accent-foreground: var(--foreground); 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
+    --accent: var(--clr-lemon);
+    --accent-foreground: var(--foreground);
+    --muted: var(--clr-muted-flamingo);
+    --muted-foreground: var(--foreground);
+    /* --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-   
+    --ring: 217, 91%, 60%; */
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -83,6 +84,10 @@
       transparent 20px
     );
   }
+
+  .flex-between {
+    @apply flex justify-between;
+  }
 }
 
 @layer components {
@@ -90,34 +95,24 @@
     @apply w-8 h-8 md:w-12 md:h-12 flex justify-center items-center rounded-full;
   }
 
-  .circle-button .lucide { 
+  .circle-button .lucide {
     @apply w-4 h-4 md:w-5 md:h-5;
+  }
+
+  .startup-card {
+    @apply tracking-tight rounded-[22px] bg-background hover:bg-muted border-[5px] cursor-pointer px-6 py-8 border-foreground hover:border-primary shadow-200 hover:shadow-primary;
   }
 }
 
 @layer base {
-  /* * {
-    @apply border-border;
-  } */
   body {
     background-color: var(--background);
     color: var(--foreground);
   }
 
- 
-  /* .circle-button {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 99999px;
+  *:focus-visible {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 4px var(--tw-ring-color);
   }
 
-  @media (min-width: 768px) { 
-    .circle-button {
-      width: 3.125rem;
-      height: 3.125rem;
-    }
-  } */
 }

@@ -11,10 +11,11 @@ export default {
   ],
   theme: {
     extend: {
-      // boxShadow: {
-      //   "100": "2px 2px 0px 0px rgb(var(--clr-foreground))",
-      //   "200": "2px 2px 0px 2px rgb(var(--clr-foreground))",
-      // },
+      boxShadow: {
+				100: "2px 2px 0px 0px",
+				200: "2px 2px 0px 2px",
+				300: "2px 2px 0px 2px",
+			},
       fontFamily: {
         sans: ["var(--font-work-sans)", "Trebuchet MS"],
       },
@@ -42,14 +43,20 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          foreground: "hsl(var(--surface-foreground))",
+        },
         // accent: {
         //   DEFAULT: "hsl(var(--accent))",
         //   foreground: "hsl(var(--accent-foreground))",
         // },
-        // muted: {
-        //   DEFAULT: "hsl(var(--muted))",
-        //   foreground: "hsl(var(--muted-foreground))",
-        // },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        neutral: "hsl(var(--neutral))",
+
         // destructive: {
         //   DEFAULT: "hsl(var(--destructive))",
         //   foreground: "hsl(var(--destructive-foreground))",

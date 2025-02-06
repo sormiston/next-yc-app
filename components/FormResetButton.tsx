@@ -22,7 +22,7 @@ const FormResetButton: React.FC<FormResetButtonProps> = ({
       formInputs.forEach((inputName) => {
         form[inputName].value = "";
       });
-      router.push(formURL);
+      router.push(formURL, { scroll: false });
       form.query.focus();
     }
   };
